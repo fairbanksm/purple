@@ -11,7 +11,7 @@ $subject "Weekly Customer Service Count"
 $smtpserver = ""
 $body = ("Weekly customer service email counts.")
 
-#set days of the week - this script shoyuld be run on Friday
+#set days of the week - this script should be run on Friday
 $monday = (get-date).AddDays(-4).ToString('MM/dd/yyy')
 $tuesday = (get-date).AddDays(-3).ToString('MM/dd/yyy')
 $wednesday = (get-date).AddDays(-2).ToString('MM/dd/yyy')
@@ -71,7 +71,6 @@ Get-MessageTrackingLog -ResultSize Unlimited -Start ($thursday + $starttime2) -E
 $friday | Out-File C:\script\evening-count.txt -Append
 Get-MessageTrackingLog -ResultSize Unlimited -Start ($friday + $starttime2) -End ($friday + $endtime2) `
 -Recipient $recipient -EventID RECEIVE | Measure-Object | Format-Table -Property count -AutoSize | Out-File C:\script\evening-count.txt -Append
-
 
 
 #send mail message with attachments
