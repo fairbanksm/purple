@@ -1,9 +1,15 @@
 ﻿Add-PSSnapin Microsoft.Exchange.Management.PowerShell.SnapIn;
 
 
+#mailbox to query for counts
 $recipient = ""
-$mailrecipients = @("")
+
+#variables for mail message
+$from = ""
+$to = @("")
+$subject "Weekly Customer Service Count"
 $smtpserver = ""
+$body = ("Weekly customer service email counts.")
 
 #set days of the week - this script shoyuld be run on Friday
 $monday = (get-date).AddDays(-4).ToString('MM/dd/yyy')
@@ -69,5 +75,4 @@ Get-MessageTrackingLog -ResultSize Unlimited -Start ($friday + $starttime2) -End
 
 
 #send mail message with attachments
-$body = ("Weekly customer service email counts.")
-Send-MailMessage -From meghan.fairbanks@mnpass.net -To $mailrecipients -Subject "Weekly Customer Service Count" -Body $body -SmtpServer $smtpserver -Attachments ("c:\script\morning-count.txt", "C:\script\evening-count.txt")
+Send-MailMessage -From $from -To $to -Subject $subject -Body $body -SmtpServer $smtpserver -Attachments ("c:\script\morning-count.txt", "C:\script\evening-count.txt")
