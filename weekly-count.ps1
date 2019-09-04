@@ -2,7 +2,7 @@
 
 
 $recipient = ""
-$mailrecipients = @("meghan.fairbanks@transcore.com", "mike.solomonson@mnpass.net")
+$mailrecipients = @("")
 $smtpserver = ""
 
 #set days of the week - this script shoyuld be run on Friday
