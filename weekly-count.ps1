@@ -1,9 +1,9 @@
 ﻿Add-PSSnapin Microsoft.Exchange.Management.PowerShell.SnapIn;
 
 
-$recipient = "customerservice@mnpass.net"
+$recipient = ""
 $mailrecipients = @("meghan.fairbanks@transcore.com", "mike.solomonson@mnpass.net")
-$smtpserver = "10.202.107.133"
+$smtpserver = ""
 
 #set days of the week - this script shoyuld be run on Friday
 $monday = (get-date).AddDays(-4).ToString('MM/dd/yyy')
