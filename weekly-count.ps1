@@ -22,7 +22,7 @@ $friday = (get-date).AddDays(-0).ToString('MM/dd/yyy')
 #weekly morning numbers
 $starttime1 = " 6:30"
 $endtime1 = " 8:00"
-$mornmessage = ("Count of emails sent to Customer Serveice between" + $starttime1 + " and" + $endtime1 + ".")
+$mornmessage = ("Count of emails sent to Customer Service between" + $starttime1 + " and" + $endtime1 + ".")
 
 $mornmessage | Out-File C:\script\morning-count.txt
 $monday | Out-File C:\script\morning-count.txt -Append
@@ -49,7 +49,7 @@ Get-MessageTrackingLog -ResultSize Unlimited -Start ($friday + $starttime1) -End
 #weekly evening numbers
 $starttime2 = " 17:00"
 $endtime2 = " 18:00"
-$evemessage = ("Count of emails sent to Customer Serveice between" + $starttime2 + " and" + $endtime2 + ".")
+$evemessage = ("Count of emails sent to Customer Service between" + $starttime2 + " and" + $endtime2 + ".")
 
 $evemessage | Out-File C:\script\evening-count.txt
 $monday | Out-File C:\script\evening-count.txt -Append
