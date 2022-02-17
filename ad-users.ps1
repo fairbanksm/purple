@@ -4,11 +4,11 @@
 # Updated:  12/1/21
 
 #variables for mail message
-$from = "meghan.fairbanks@ezpassmn.net"
-$to = @("meghan.fairbanks@transcore.com")
+$from = "meghan.fairbanks@domain.com"
+$to = @("meghan.fairbanks@domain.com")
 $subject = "Active Directory Users Query"
 $body = "Monthly AD users query."
-$smtpserver = "10.202.101.35"
+$smtpserver = "(ip address))"
 
 $filepath = "c:\script\ad-users.csv"
 
